@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue';
 import { useUserStore } from '../store/userStore.js';
 import { useHoroscopeStore } from '../store/horoscopeStore.js';
+import { BackButton, MainButton, Popup } from 'vue-tg'
 
 const horoscopeStore = useHoroscopeStore();
 const userStore = useUserStore();
@@ -18,12 +19,13 @@ const loadHoroscope = (sign) => {
   horoscopeStore.fetchHoroscope(sign, language);
 };
 
-loadHoroscope('aries');
+
+
 </script>
 
 <template>
   <div>
-    {{horoscope}}
+    {{userStore.language}}
   </div>
 </template>
 
