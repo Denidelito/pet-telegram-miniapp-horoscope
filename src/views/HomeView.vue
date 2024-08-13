@@ -9,7 +9,7 @@ const horoscopeStore = useHoroscopeStore();
 const userStore = useUserStore();
 
 const selectedSign = ref(null);
-const zodiacSigns = ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'];
+const zodiacSigns = ref(horoscopeStore.zodiacSignsData);
 const horoscope = computed(() => horoscopeStore.horoscope);
 
 const isBackButtonVisible = ref(true);
@@ -29,6 +29,7 @@ function handleBackButton() {
 
 <template>
   <div>
+    {{zodiacSigns}}
     <svg-icon name="aries"/>
   </div>
 </template>
