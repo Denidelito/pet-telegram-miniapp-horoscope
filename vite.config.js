@@ -6,10 +6,7 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 export default defineConfig({
   root: resolve(__dirname, 'src'),
   base:  './',
-  build: {
-    outDir: '../docs'
-  },
-  publicDir: 'public',
+  publicDir: 'docs',
   plugins: [
     createSvgIconsPlugin({
       iconDirs: [resolve(process.cwd(), 'src/assets/icons/')],
