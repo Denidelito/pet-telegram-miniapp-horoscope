@@ -20,46 +20,68 @@ const goToHoroscopeDetail = () => {
 </script>
 
 <template>
-  <div class="card" @click="goToHoroscopeDetail">
-    <div class="card__icon">
-      <svg-icon :name="icon" width="60" height="60"/>
+  <div class="card">
+    <div class="card__content">
+      <svg-icon class="card__icon" :name="icon" width="42" height="42"/>
+      <div>
+        <p class="card__title">{{title}}</p>
+        <p class="card__dates">{{dates}}</p>
+      </div>
     </div>
-    <h3 class="card__title">{{title}}</h3>
-    <p class="card__dates">{{dates}}</p>
+    <div class="card__nav">
+      <button class="card__btn" @click="goToHoroscopeDetail">
+        Открыть
+      </button>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  color-scheme: light dark;
-  border: 1px solid;
-  border-radius: 10px;
+  padding: 25px 15px;
+  border-radius: 15px;
   background-color: white;
   transition: .3s;
+  box-shadow: 0 4px 15px rgba(0, 175, 240, 0.10);
 
   &:hover {
     transform: scale(1.05);
   }
 
+  &__content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+  }
+
+  &__icon {
+    stroke: #2395FF;
+  }
+
   &__title {
+    color: #9A9A9A;
     font-size: 1.2rem;
-    margin: 0 0 .4rem;
+    margin: 0 0 .4em;
   }
 
   &__dates {
-    font-size: .8rem;
+    color: #C4C4C4;
+    font-size: 1rem;
     margin: 0;
   }
-}
 
-@media (prefers-color-scheme: light) {
-  .card {
-    box-shadow: 0 4px 15px 0 rgba(0, 175, 240, 0.1);
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2395FF;
+    border: 1px solid #2395FF;
+    background-color: transparent;
   }
 }
 </style>
