@@ -1,5 +1,23 @@
-# Vue 3 + Vite
+# Telegram Miniapp Гороскоп
+Мини-приложение для Telegram, которое предоставляет ежедневный гороскоп на основе выбранного пользователем знака зодиака. Приложение поддерживает русский и английский языки.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Структура проекта
+* Vue 3
+* Pinia
+* Vue Router
+* Axios
+* Sass
+* Vite
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+----
+
+### sh
+Копирование проекта ```git clone <ссылка-на-репозиторий>```
+
+Запустите сервер разработки ```npm install```
+
+Соберите проект для продакшена: ```npm run dev```
+
+Предпросмотр сборки: ```npm run build```
+
+Предпросмотр сборки: ```npm run preview```

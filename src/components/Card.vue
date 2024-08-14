@@ -1,5 +1,5 @@
 <script setup>
-import {defineProps} from 'vue'
+import {computed, defineProps} from 'vue'
 import { useRouter } from 'vue-router';
 import SvgIcon from "./SvgIcon.vue";
 
@@ -8,7 +8,11 @@ const props = defineProps({
   title: String,
   dates: String,
   icon: String,
-  sign: String
+  sign: String,
+  lang: {
+    String,
+    default: 'en'
+  }
 });
 
 const router = useRouter();
@@ -17,6 +21,7 @@ const goToHoroscopeDetail = () => {
   router.push({ name: 'HoroscopeDetail', params: { sign: props.sign } });
 };
 
+let textBtn = computed(() => props.lang === 'ru' ? 'Открыть' : 'Open')
 </script>
 
 <template>
@@ -30,7 +35,7 @@ const goToHoroscopeDetail = () => {
     </div>
     <div class="card__nav">
       <button class="card__btn" @click="goToHoroscopeDetail">
-        Открыть
+        {{textBtn}}
       </button>
     </div>
   </div>
@@ -41,6 +46,7 @@ const goToHoroscopeDetail = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   cursor: pointer;
   padding: 25px 15px;
   border-radius: 15px;
@@ -64,14 +70,14 @@ const goToHoroscopeDetail = () => {
   }
 
   &__title {
-    color: #9A9A9A;
-    font-size: 1.2rem;
+    color: var(--color-primary);
+    font-size: 18px;
     margin: 0 0 .4em;
   }
 
   &__dates {
-    color: #C4C4C4;
-    font-size: 1rem;
+    color: var(--color-secondary);
+    font-size: 16px;
     margin: 0;
   }
 
