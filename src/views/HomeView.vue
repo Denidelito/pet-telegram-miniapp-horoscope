@@ -2,8 +2,9 @@
 import { computed, ref } from 'vue';
 import { useUserStore } from '../store/userStore.js';
 import { useHoroscopeStore } from '../store/horoscopeStore.js';
-import { MainButton } from 'vue-tg'
+import {MainButton, useWebApp} from 'vue-tg'
 import SvgIcon from "../components/SvgIcon.vue";
+import Card from "../components/Card.vue";
 
 const horoscopeStore = useHoroscopeStore();
 const userStore = useUserStore();
@@ -30,12 +31,23 @@ function handleBackButton() {
 </script>
 
 <template>
-  <div>
-    <div v-for="(signs, index) in zodiacSigns" :key="index">
-      <svg-icon :name="signs.icon" width="60" height="60"/>
+  <div class="row">
+    <div class="col" v-for="(sign, index) in zodiacSigns" :key="index">
+      <card :title="sign.name[language]"
+            :dates="sign.dates[language]"
+            :icon="sign.icon"/>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 auto;
+}
+.col {
+  width: calc(50% - 5px);
+}
 </style>

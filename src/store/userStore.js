@@ -4,7 +4,7 @@ import { useWebApp } from 'vue-tg';
 
 export const useUserStore = defineStore('userStore', () => {
     let initData = useWebApp();
-    let language = computed(() => initData.user?.language_code || 'en');
+    let language = computed(() => initData.initDataUnsafe?.user?.language_code || 'en');
 
     return {
         language,

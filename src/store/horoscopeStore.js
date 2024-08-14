@@ -7,62 +7,62 @@ export const useHoroscopeStore = defineStore('horoscopeStore', () => {
     const zodiacSignsData = ref({
         aries: {
             name: { ru: 'Овен', en: 'Aries' },
-            dates: { ru: '21 марта - 19 апреля', en: 'March 21 - April 19' },
+            dates: { ru: '21 мар - 19 апр', en: 'Mar 21 - Apr 19' },
             icon: 'aries'
         },
         taurus: {
             name: { ru: 'Телец', en: 'Taurus' },
-            dates: { ru: '20 апреля - 20 мая', en: 'April 20 - May 20' },
+            dates: { ru: '20 апр - 20 мая', en: 'Apr 20 - May 20' },
             icon: 'taurus'
         },
         gemini: {
             name: { ru: 'Близнецы', en: 'Gemini' },
-            dates: { ru: '21 мая - 20 июня', en: 'May 21 - June 20' },
+            dates: { ru: '21 мая - 20 июн', en: 'Ma 21 - Jun 20' },
             icon: 'gemini'
         },
         cancer: {
             name: { ru: 'Рак', en: 'Cancer' },
-            dates: { ru: '21 июня - 22 июля', en: 'June 21 - July 22' },
+            dates: { ru: '21 июн - 22 июл', en: 'Jun 21 - Jul 22' },
             icon: 'cancer'
         },
         leo: {
             name: { ru: 'Лев', en: 'Leo' },
-            dates: { ru: '23 июля - 22 августа', en: 'July 23 - August 22' },
+            dates: { ru: '23 июл - 22 авг', en: 'Jul 23 - Aug 22' },
             icon: 'leo'
         },
         virgo: {
             name: { ru: 'Дева', en: 'Virgo' },
-            dates: { ru: '23 августа - 22 сентября', en: 'August 23 - September 22' },
+            dates: { ru: '23 авг - 22 сен', en: 'Aug 23 - Sep 22' },
             icon: 'virgo'
         },
         libra: {
             name: { ru: 'Весы', en: 'Libra' },
-            dates: { ru: '23 сентября - 22 октября', en: 'September 23 - October 22' },
+            dates: { ru: '23 сен - 22 окт', en: 'Sep 23 - Oct 22' },
             icon: 'libra'
         },
         scorpio: {
             name: { ru: 'Скорпион', en: 'Scorpio' },
-            dates: { ru: '23 октября - 21 ноября', en: 'October 23 - November 21' },
+            dates: { ru: '23 окт - 21 нояб', en: 'Oct 23 - Nov 21' },
             icon: 'scorpio'
         },
         sagittarius: {
             name: { ru: 'Стрелец', en: 'Sagittarius' },
-            dates: { ru: '22 ноября - 21 декабря', en: 'November 22 - December 21' },
+            dates: { ru: '22 нояб - 21 дек', en: 'Nov 22 - Dec 21' },
             icon: 'sagittarius'
         },
         capricorn: {
             name: { ru: 'Козерог', en: 'Capricorn' },
-            dates: { ru: '22 декабря - 19 января', en: 'December 22 - January 19' },
+            dates: { ru: '22 дек - 19 янв', en: 'Dec 22 - Jan 19' },
             icon: 'capricorn'
         },
         aquarius: {
             name: { ru: 'Водолей', en: 'Aquarius' },
-            dates: { ru: '20 января - 18 февраля', en: 'January 20 - February 18' },
+            dates: { ru: '20 янв - 18 фев', en: 'Jan 20 - Feb 18' },
             icon: 'aquarius'
         },
         pisces: {
             name: { ru: 'Рыбы', en: 'Pisces' },
-            dates: { ru: '19 февраля - 20 марта', en: 'February 19 - March 20' },
+            dates: { ru: '19 фев - 20 мар', en: 'Feb 19 - Mar 20' },
             icon: 'pisces'
         },
     });
