@@ -1,22 +1,26 @@
 <script setup>
 import {defineProps} from 'vue'
+import { useRouter } from 'vue-router';
 import SvgIcon from "./SvgIcon.vue";
 
+
 const props = defineProps({
-  icon: {
-    type: String
-  },
-  title: {
-    type: String
-  },
-  dates: {
-    type: String
-  }
+  title: String,
+  dates: String,
+  icon: String,
+  sign: String
 });
+
+const router = useRouter();
+
+const goToHoroscopeDetail = () => {
+  router.push({ name: 'HoroscopeDetail', params: { sign: props.sign } });
+};
+
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" @click="goToHoroscopeDetail">
     <div class="card__icon">
       <svg-icon :name="icon" width="60" height="60"/>
     </div>
@@ -27,6 +31,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .card {
+  cursor: pointer;
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -38,7 +43,7 @@ const props = defineProps({
   transition: .3s;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   &__title {
