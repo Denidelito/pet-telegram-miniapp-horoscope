@@ -72,6 +72,7 @@ export const useHoroscopeStore = defineStore('horoscopeStore', () => {
             const response = await axios.post('https://poker247tech.ru/get_horoscope/', {
                 sign,
                 language,
+                "period": "today"
             });
             horoscope.value = response.data;
         } catch (error) {
